@@ -13,11 +13,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if showingMainView {
-                CameraWithPosesAndOverlaysView()
+                MenuView()
             } else {
                 SplashView()
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                             withAnimation {
                                 self.showingMainView = true
                             }

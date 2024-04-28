@@ -15,6 +15,8 @@ class ViewModel: ObservableObject {
 
     /// The full-screen view that presents the pose on top of the video frames.
     @Published var liveCameraImageAndPoses: (image: CGImage, poses: [Pose])?
+    
+
 
     /// The user-visible value of the repetition count.
     var uiCount: Float = 0.0
@@ -124,6 +126,8 @@ class ViewModel: ObservableObject {
         }
     }
     
+
+    
     /// Predict the action repetition count.
     func predictCount() async throws {
         // Create an asynchronous temporal sequence for the pose stream.
@@ -158,7 +162,7 @@ class ViewModel: ObservableObject {
             // Achieve the target count
             if uiCount >= 10 {
                uiCount = 0.0
-                AudioServicesPlaySystemSound(1322)
+                playSound()
             }
 
             // Add the incremental count to the UI counter.
