@@ -164,6 +164,13 @@ class ViewModel: ObservableObject {
                 playSound(name: "mclaren", extensionFile: "mp3")
                 showOverlay = true
                 uiCount = 0.0
+                    
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            withAnimation {
+                                self.showOverlay = false
+                            }
+                        }
+                
             }
             
 

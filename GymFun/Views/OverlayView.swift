@@ -12,7 +12,7 @@ struct OverlayView: View {
 
     @State var isPresented = false
     
-    let overlayCount: Bool
+    var overlayCount: Bool
     let percent: CGFloat
     let flip: () -> Void
 
@@ -75,11 +75,12 @@ struct OverlayView: View {
                             .onAppear {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                                 }
+                                withAnimation {
+                                    
+                                }
                         }
                     }
                 }
-            
-        
         }
     
     func calcPercent() -> CGFloat {
