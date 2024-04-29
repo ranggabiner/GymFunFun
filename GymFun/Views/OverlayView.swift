@@ -11,13 +11,15 @@ import SwiftUI
 struct OverlayView: View {
 
     @State var isPresented = false
+
     
+    var detected: Bool
     var overlayCount: Bool
     let percent: CGFloat
     let flip: () -> Void
+    
 
     var body: some View {
-            
                 ZStack {
                     VStack {
                         HStack {
@@ -70,6 +72,9 @@ struct OverlayView: View {
 
                         }
                     }.padding()
+                    if detected {
+                        FloatersView()
+                    }
                     if overlayCount {
                         OverlayFeedbackFull()
                             .onAppear {
@@ -105,7 +110,7 @@ extension View {
 
 struct OverlayView_Previews: PreviewProvider {
     static var previews: some View {
-        OverlayView(overlayCount: true, percent: 6 / 10) { }
+        OverlayView(detected: true, overlayCount: false, percent: 6 / 10) { }
             .background(Color.red.opacity(0.4))
 
     }

@@ -20,7 +20,9 @@ class ViewModel: ObservableObject {
     var uiCount: Float = 0.0
     
     var showOverlay:Bool = false
-
+    
+    var isDetected: Bool = false
+    
     private var displayCameraTask: Task<Void, Error>?
 
     private var predictionTask: Task<Void, Error>?
@@ -157,6 +159,12 @@ class ViewModel: ObservableObject {
             // If detected
             if currentCumulativeCount - lastCumulativeCount >= 0.001 {
                 AudioServicesPlaySystemSound(1323)
+                isDetected = true
+
+            } 
+            // If not detected
+            if currentCumulativeCount - lastCumulativeCount < 0.001 {
+                isDetected = false
             }
             
             // Achieve the target count
@@ -164,13 +172,11 @@ class ViewModel: ObservableObject {
                 playSound(name: "mclaren", extensionFile: "mp3")
                 showOverlay = true
                 uiCount = 0.0
-                    
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                             withAnimation {
                                 self.showOverlay = false
                             }
                         }
-                
             }
             
 

@@ -12,7 +12,7 @@ struct CameraWithPosesAndOverlaysView: View {
     @StateObject var viewModel = ViewModel()
 
     var body: some View {
-        OverlayView(overlayCount: viewModel.showOverlay, percent: CGFloat(viewModel.uiCount) / 10) {
+        OverlayView(detected: viewModel.isDetected, overlayCount: viewModel.showOverlay, percent: CGFloat(viewModel.uiCount) / 10) {
             viewModel.onCameraButtonTapped()
         }
         .background {
