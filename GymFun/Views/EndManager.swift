@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct EndManager: View {
+    @State private var showingMainView = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if showingMainView {
+                MenuView()
+            } else {
+                CongratulationView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 24) {
+                            withAnimation {
+                                self.showingMainView = true
+                            }
+                        }
+                    }
+            }
+        }
     }
 }
 

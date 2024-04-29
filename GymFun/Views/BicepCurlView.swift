@@ -9,13 +9,16 @@ import SwiftUI
 
 struct BicepCurlView: View {
     var body: some View {
-        VStack {
-            GifImageView("bicepCurl")
-                .frame(width: 800, height: 800)
+        ZStack {
+            Rectangle()
+                .fill(Color(.orange))
+                GifImageView("bicepCurl_orange")
+                .frame(width: 700, height: 700)
                 .onAppear {
                     playSound(name: "sepuh", extensionFile: "mp3")
-            }
+                }
         }
+        .background(Color(.orange))
     }
 }
 

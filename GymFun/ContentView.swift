@@ -17,7 +17,7 @@ struct ContentView: View {
             } else {
                 SplashView()
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                             withAnimation {
                                 self.showingMainView = true
                             }

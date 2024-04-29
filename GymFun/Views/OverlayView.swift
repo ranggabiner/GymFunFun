@@ -11,6 +11,7 @@ import SwiftUI
 struct OverlayView: View {
 
     let count: Float
+    let percent: CGFloat
     let flip: () -> Void
 
     var body: some View {
@@ -24,6 +25,15 @@ struct OverlayView: View {
                     Text("\(count, specifier: "%2.0f")")
                         .font(.title)
                         .foregroundColor(.white)
+                    ZStack(alignment: .leading) {
+                        ZStack {
+                            Capsule().fill(Color.black.opacity(0.08 )).frame(height: 22)
+                        }
+                        Capsule()
+                            .fill(LinearGradient(gradient: .init(colors: [Color(.orange), Color(.red)]), startPoint: .leading, endPoint: .trailing))
+                            .frame(width: calcPercent(), height: 22)
+                    }
+
                 }
                 Spacer()
             }.bubbleBackground()
@@ -44,7 +54,15 @@ struct OverlayView: View {
             }
         }.padding()
     }
+    
+    func calcPercent() -> CGFloat {
+        let width = UIScreen.main.bounds.width - 80
+        
+        return width * CGFloat(percent)
+    }
 }
+
+
 
 extension View {
     func bubbleBackground() -> some View {
@@ -59,7 +77,7 @@ extension View {
 
 struct OverlayView_Previews: PreviewProvider {
     static var previews: some View {
-        OverlayView(count: 3.0) { }
+        OverlayView(count: 3.0, percent: 6 / 10) { }
             .background(Color.red.opacity(0.4))
 
     }

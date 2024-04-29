@@ -9,17 +9,30 @@ import SwiftUI
 
 struct BicepCurlManager: View {
     @State private var showingMainView = false
+    @State private var showingStartView = false
+    @StateObject var viewModel = ViewModel()
+
     
     var body: some View {
         VStack {
             if showingMainView {
-                CameraWithPosesAndOverlaysView()
+                ProcessManager(ending: viewModel.isEnd)
+            }
+            else if showingStartView {
+                StartView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                            withAnimation {
+                                self.showingMainView = true
+                            }
+                        }
+                }
             } else {
                 BicepCurlView()
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 22) {
                             withAnimation {
-                                self.showingMainView = true
+                                self.showingStartView = true
                             }
                         }
                 }

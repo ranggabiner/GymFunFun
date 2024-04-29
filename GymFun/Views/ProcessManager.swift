@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct ProcessManager: View {
+    @State private var showingMainView = false
+    
+    let ending: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if ending {
+                MenuView()
+            } else {
+                CameraWithPosesAndOverlaysView()
+            }
+        }
     }
 }
 
 #Preview {
-    ProcessManager()
+    ProcessManager(ending: true)
 }

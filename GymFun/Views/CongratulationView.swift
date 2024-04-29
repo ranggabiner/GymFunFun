@@ -9,7 +9,16 @@ import SwiftUI
 
 struct CongratulationView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Rectangle()
+                .fill(Color(.orange))
+            
+            VideoManager(videoName: "congratulation_guy")
+                .frame(width: UIScreen.main.bounds.width, height: 500)
+                .scaleEffect(1.8) // Adjust the scale factor as needed
+                .offset(x: -90, y: 0) // Adjust the offset as needed
+        }
+        .background(Color(.orange))
     }
 }
 

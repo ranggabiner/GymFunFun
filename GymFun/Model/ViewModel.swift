@@ -16,7 +16,9 @@ class ViewModel: ObservableObject {
     /// The full-screen view that presents the pose on top of the video frames.
     @Published var liveCameraImageAndPoses: (image: CGImage, poses: [Pose])?
     
-
+    var onUIUpdate: (() -> Void)?
+    
+    var isEnd: Bool = false
 
     /// The user-visible value of the repetition count.
     var uiCount: Float = 0.0
@@ -154,15 +156,16 @@ class ViewModel: ObservableObject {
              }
              */
             
-            // If not move or can't detect
+            // If detected
             if currentCumulativeCount - lastCumulativeCount >= 0.001 {
                 AudioServicesPlaySystemSound(1323)
             }
             
             // Achieve the target count
             if uiCount >= 10 {
-               uiCount = 0.0
                 playSound(name: "mclaren", extensionFile: "mp3")
+                isEnd = true
+                onUIUpdate?()
             }
 
             // Add the incremental count to the UI counter.
