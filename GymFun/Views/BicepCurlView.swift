@@ -9,7 +9,13 @@ import SwiftUI
 
 struct BicepCurlView: View {
     var body: some View {
-        Text("Bicep Curl")
+        VStack {
+            GifImageView("bicepCurl")
+                .frame(width: 800, height: 800)
+                .onAppear {
+                    playSound(name: "sepuh", extensionFile: "mp3")
+            }
+        }
     }
 }
 

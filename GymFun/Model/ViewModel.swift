@@ -155,14 +155,14 @@ class ViewModel: ObservableObject {
              */
             
             // If not move or can't detect
-            if currentCumulativeCount - lastCumulativeCount <= 0.001 {
+            if currentCumulativeCount - lastCumulativeCount >= 0.001 {
                 AudioServicesPlaySystemSound(1323)
             }
             
             // Achieve the target count
             if uiCount >= 10 {
                uiCount = 0.0
-                playSound()
+                playSound(name: "mclaren", extensionFile: "mp3")
             }
 
             // Add the incremental count to the UI counter.

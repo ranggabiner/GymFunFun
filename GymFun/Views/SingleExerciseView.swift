@@ -15,7 +15,7 @@ struct SingleExerciseView: View {
             VStack {
                 Spacer()
                 //.navigationBarBackButtonHidden(true) (for can't back to old screen)
-                NavigationLink(destination: BicepCurlView()
+                NavigationLink(destination: BicepCurlManager()
                     .navigationBarBackButtonHidden(true)) {
                     GifImageView("bicepCurl")
                         .frame(width: 200, height: 200)

@@ -7,10 +7,12 @@
 
 import AVFoundation
 
+
 var player: AVAudioPlayer!
 
-func playSound() {
-    let url = Bundle.main.url(forResource: "mclaren", withExtension: "mp3")
+
+func playSound(name: String, extensionFile: String) {
+    let url = Bundle.main.url(forResource: name, withExtension: extensionFile)
     
     // do nothing if this url is empty
     guard url != nil else {
@@ -23,4 +25,8 @@ func playSound() {
     } catch {
         print("\(error)")
     }
+}
+
+func stopSound() {
+    player?.stop()
 }

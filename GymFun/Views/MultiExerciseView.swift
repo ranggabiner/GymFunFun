@@ -9,7 +9,20 @@ import SwiftUI
 
 struct MultiExerciseView: View {
     var body: some View {
-        Text("Multi Exercise!")
+        ZStack {
+            Rectangle()
+                .fill(Color(.orange))
+            // .navigationBarBackButtonHidden(true) (for can't back to old page)
+            NavigationLink(destination: MultiExerciseManager()
+                .navigationBarBackButtonHidden(true)
+            ) {
+                GifImageView("multiExercise")
+                    .frame(width: 300, height: 300)
+                    .clipShape(Circle())
+            }
+        }
+        .background(Color(.orange))
+        
     }
 }
 

@@ -25,6 +25,8 @@
 		8F62BA8C2BDEAEFB0095E304 /* SquatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62BA8B2BDEAEFB0095E304 /* SquatView.swift */; };
 		8F62BA8E2BDEB06D0095E304 /* BicepCurlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62BA8D2BDEB06D0095E304 /* BicepCurlManager.swift */; };
 		8F62BA902BDEB30F0095E304 /* JumpingJackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62BA8F2BDEB30F0095E304 /* JumpingJackManager.swift */; };
+		8F62BA922BDEB8590095E304 /* multiExercise.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8F62BA912BDEB8590095E304 /* multiExercise.gif */; };
+		8F62BA962BDEB9570095E304 /* MultiExerciseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62BA952BDEB9570095E304 /* MultiExerciseManager.swift */; };
 		8FC027002BDE58AC00755C56 /* GymFunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC026FF2BDE58AC00755C56 /* GymFunApp.swift */; };
 		8FC027022BDE58AC00755C56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC027012BDE58AC00755C56 /* ContentView.swift */; };
 		8FC027042BDE58AD00755C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FC027032BDE58AD00755C56 /* Assets.xcassets */; };
@@ -39,6 +41,7 @@
 		8FC027212BDE5A3D00755C56 /* PosesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC027202BDE5A3D00755C56 /* PosesView.swift */; };
 		8FC027262BDE5A7B00755C56 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC027252BDE5A7B00755C56 /* ViewModel.swift */; };
 		8FC027282BDE5AAC00755C56 /* CameraWithPosesAndOverlaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC027272BDE5AAC00755C56 /* CameraWithPosesAndOverlaysView.swift */; };
+		8FE4F5CE2BDF1E520037D23C /* sepuh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8FE4F5CD2BDF1E520037D23C /* sepuh.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,8 @@
 		8F62BA8B2BDEAEFB0095E304 /* SquatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatView.swift; sourceTree = "<group>"; };
 		8F62BA8D2BDEB06D0095E304 /* BicepCurlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepCurlManager.swift; sourceTree = "<group>"; };
 		8F62BA8F2BDEB30F0095E304 /* JumpingJackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpingJackManager.swift; sourceTree = "<group>"; };
+		8F62BA912BDEB8590095E304 /* multiExercise.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = multiExercise.gif; sourceTree = "<group>"; };
+		8F62BA952BDEB9570095E304 /* MultiExerciseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiExerciseManager.swift; sourceTree = "<group>"; };
 		8FC026FC2BDE58AC00755C56 /* GymFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC026FF2BDE58AC00755C56 /* GymFunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymFunApp.swift; sourceTree = "<group>"; };
 		8FC027012BDE58AC00755C56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 		8FC027202BDE5A3D00755C56 /* PosesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosesView.swift; sourceTree = "<group>"; };
 		8FC027252BDE5A7B00755C56 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		8FC027272BDE5AAC00755C56 /* CameraWithPosesAndOverlaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraWithPosesAndOverlaysView.swift; sourceTree = "<group>"; };
+		8FE4F5CD2BDF1E520037D23C /* sepuh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sepuh.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 		8F62BA742BDE95D20095E304 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				8FE4F5CD2BDF1E520037D23C /* sepuh.mp3 */,
 				8F62BA752BDE96DD0095E304 /* mclaren.mp3 */,
 				8F62BA772BDE97E80095E304 /* SoundManager.swift */,
 			);
@@ -109,6 +116,7 @@
 		8F62BA802BDEA7270095E304 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				8F62BA912BDEB8590095E304 /* multiExercise.gif */,
 				8F62BA822BDEA7350095E304 /* bicepCurl.gif */,
 				8F62BA832BDEA7350095E304 /* jumpingJack.gif */,
 				8F62BA812BDEA7350095E304 /* squat.gif */,
@@ -177,6 +185,7 @@
 				8F62BA8B2BDEAEFB0095E304 /* SquatView.swift */,
 				8F62BA8D2BDEB06D0095E304 /* BicepCurlManager.swift */,
 				8F62BA8F2BDEB30F0095E304 /* JumpingJackManager.swift */,
+				8F62BA952BDEB9570095E304 /* MultiExerciseManager.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +282,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F62BA922BDEB8590095E304 /* multiExercise.gif in Resources */,
+				8FE4F5CE2BDF1E520037D23C /* sepuh.mp3 in Resources */,
 				8FC027072BDE58AD00755C56 /* Preview Assets.xcassets in Resources */,
 				8F62BA842BDEA7350095E304 /* squat.gif in Resources */,
 				8FC027042BDE58AD00755C56 /* Assets.xcassets in Resources */,
@@ -309,6 +320,7 @@
 				8FC027002BDE58AC00755C56 /* GymFunApp.swift in Sources */,
 				8F62BA8A2BDEAEE90095E304 /* SquatManager.swift in Sources */,
 				8F136DFC2BDE6705008925F2 /* BicepCurlView.swift in Sources */,
+				8F62BA962BDEB9570095E304 /* MultiExerciseManager.swift in Sources */,
 				8F62BA882BDEA77B0095E304 /* GifManager.swift in Sources */,
 				8F62BA7C2BDEA13E0095E304 /* SingleExerciseView.swift in Sources */,
 				8FC0271D2BDE59DF00755C56 /* Connection.swift in Sources */,
