@@ -10,7 +10,6 @@ import SwiftUI
 struct BicepCurlManager: View {
     @State private var showingMainView = false
     @State private var showingStartView = false
-    @StateObject var viewModel = ViewModel()
 
     
     var body: some View {
