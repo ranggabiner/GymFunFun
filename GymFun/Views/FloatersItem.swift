@@ -17,7 +17,7 @@ struct FloatersItem: View {
             .position(loc)
             .opacity(opacity)
             .onAppear {
-                withAnimation(Animation.spring(duration: 1)) {
+                withAnimation(Animation.spring(duration: 2.3)) {
                     loc = CGPoint(x: .random(in: loc.x - 80 ... loc.x + 80), y: 0)
                     opacity = 0
                 }
