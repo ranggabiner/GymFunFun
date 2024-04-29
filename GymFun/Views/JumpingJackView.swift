@@ -14,9 +14,9 @@ struct JumpingJackView: View {
                 .fill(Color(.orange))
                 GifImageView("jumpingJack_orange")
                 .frame(width: 700, height: 700)
-                .onAppear {
-                    playSound(name: "sepuh", extensionFile: "mp3")
-                }
+//                .onAppear {
+//                    playSound(name: "sepuh", extensionFile: "mp3")
+//                }
         }
         .background(Color(.orange))
     }

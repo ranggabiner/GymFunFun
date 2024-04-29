@@ -160,11 +160,10 @@ class ViewModel: ObservableObject {
             }
             
             // Achieve the target count
-            if uiCount >= 10 {
+            if uiCount >= 5 {
                 playSound(name: "mclaren", extensionFile: "mp3")
                 showOverlay = true
                 uiCount = 0.0
-                    
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                             withAnimation {
                                 self.showOverlay = false
