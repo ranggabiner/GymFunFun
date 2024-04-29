@@ -10,7 +10,6 @@ import SwiftUI
 /// - Tag: OverlayView
 struct OverlayView: View {
 
-    let count: Float
     let percent: CGFloat
     let flip: () -> Void
 
@@ -19,12 +18,6 @@ struct OverlayView: View {
             HStack {
                 Spacer()
                 VStack {
-                    Text("Count")
-                        .font(.title)
-                        .foregroundColor(.white)
-                    Text("\(count, specifier: "%2.0f")")
-                        .font(.title)
-                        .foregroundColor(.white)
                     ZStack(alignment: .leading) {
                         ZStack {
                             Capsule().fill(Color.black.opacity(0.08 )).frame(height: 22)
@@ -77,7 +70,7 @@ extension View {
 
 struct OverlayView_Previews: PreviewProvider {
     static var previews: some View {
-        OverlayView(count: 3.0, percent: 6 / 10) { }
+        OverlayView(percent: 6 / 10) { }
             .background(Color.red.opacity(0.4))
 
     }

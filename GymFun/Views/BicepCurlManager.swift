@@ -16,7 +16,7 @@ struct BicepCurlManager: View {
     var body: some View {
         VStack {
             if showingMainView {
-                ProcessManager(ending: viewModel.isEnd)
+                CameraWithPosesAndOverlaysView()
             }
             else if showingStartView {
                 StartView()
