@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		736B79862BDFA12300355385 /* NavigationBarBackButtonTitleHiddenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736B79852BDFA12300355385 /* NavigationBarBackButtonTitleHiddenModifier.swift */; };
+		73E5BC1E2BE0213E00E12AD4 /* LottieHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5BC1D2BE0213E00E12AD4 /* LottieHelper.swift */; };
+		73E5BC202BE0217400E12AD4 /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5BC1F2BE0217400E12AD4 /* TransitionView.swift */; };
+		73E5BC232BE024A200E12AD4 /* BicepMultiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5BC222BE024A200E12AD4 /* BicepMultiView.swift */; };
+		73E5BC252BE024DE00E12AD4 /* MultiCameraWithPosesAndOverlaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5BC242BE024DE00E12AD4 /* MultiCameraWithPosesAndOverlaysView.swift */; };
+		73E5BC272BE0272800E12AD4 /* JumpingMultiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5BC262BE0272800E12AD4 /* JumpingMultiView.swift */; };
+		73E5BC292BE0277800E12AD4 /* SquatMultiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5BC282BE0277800E12AD4 /* SquatMultiView.swift */; };
+		73E5BC2B2BE02F4E00E12AD4 /* ExerciseTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5BC2A2BE02F4E00E12AD4 /* ExerciseTransitionView.swift */; };
 		8F136DFC2BDE6705008925F2 /* BicepCurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F136DFB2BDE6705008925F2 /* BicepCurlView.swift */; };
 		8F136DFE2BDE6900008925F2 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F136DFD2BDE6900008925F2 /* SplashView.swift */; };
 		8F136E012BDE6ADE008925F2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8F136E002BDE6ADE008925F2 /* Lottie */; };
@@ -63,6 +70,13 @@
 
 /* Begin PBXFileReference section */
 		736B79852BDFA12300355385 /* NavigationBarBackButtonTitleHiddenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarBackButtonTitleHiddenModifier.swift; sourceTree = "<group>"; };
+		73E5BC1D2BE0213E00E12AD4 /* LottieHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieHelper.swift; sourceTree = "<group>"; };
+		73E5BC1F2BE0217400E12AD4 /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
+		73E5BC222BE024A200E12AD4 /* BicepMultiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepMultiView.swift; sourceTree = "<group>"; };
+		73E5BC242BE024DE00E12AD4 /* MultiCameraWithPosesAndOverlaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiCameraWithPosesAndOverlaysView.swift; sourceTree = "<group>"; };
+		73E5BC262BE0272800E12AD4 /* JumpingMultiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpingMultiView.swift; sourceTree = "<group>"; };
+		73E5BC282BE0277800E12AD4 /* SquatMultiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatMultiView.swift; sourceTree = "<group>"; };
+		73E5BC2A2BE02F4E00E12AD4 /* ExerciseTransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTransitionView.swift; sourceTree = "<group>"; };
 		8F136DFB2BDE6705008925F2 /* BicepCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepCurlView.swift; sourceTree = "<group>"; };
 		8F136DFD2BDE6900008925F2 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		8F136E052BDE6C8D008925F2 /* potatoPullUp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = potatoPullUp.json; sourceTree = "<group>"; };
@@ -133,8 +147,21 @@
 			isa = PBXGroup;
 			children = (
 				736B79852BDFA12300355385 /* NavigationBarBackButtonTitleHiddenModifier.swift */,
+				73E5BC1D2BE0213E00E12AD4 /* LottieHelper.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		73E5BC212BE0249100E12AD4 /* Multi */ = {
+			isa = PBXGroup;
+			children = (
+				73E5BC222BE024A200E12AD4 /* BicepMultiView.swift */,
+				73E5BC242BE024DE00E12AD4 /* MultiCameraWithPosesAndOverlaysView.swift */,
+				73E5BC262BE0272800E12AD4 /* JumpingMultiView.swift */,
+				73E5BC282BE0277800E12AD4 /* SquatMultiView.swift */,
+				73E5BC2A2BE02F4E00E12AD4 /* ExerciseTransitionView.swift */,
+			);
+			path = Multi;
 			sourceTree = "<group>";
 		};
 		8F136E022BDE6C1B008925F2 /* LottieFiles */ = {
@@ -223,6 +250,7 @@
 		8FC0270D2BDE58CF00755C56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				73E5BC212BE0249100E12AD4 /* Multi */,
 				8FC0270E2BDE58DB00755C56 /* CameraView.swift */,
 				8FC027142BDE595B00755C56 /* OverlayView.swift */,
 				8FC027202BDE5A3D00755C56 /* PosesView.swift */,
@@ -244,6 +272,7 @@
 				8F735D222BDFC901001AA032 /* OverlayFeedbackFull.swift */,
 				8F171EE42BDFEFF700E7CE94 /* FloatersItem.swift */,
 				8F171EE62BE0135900E7CE94 /* FloatersView.swift */,
+				73E5BC1F2BE0217400E12AD4 /* TransitionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -386,6 +415,7 @@
 				8FC0270F2BDE58DB00755C56 /* CameraView.swift in Sources */,
 				8FC0271B2BDE59CE00755C56 /* Joint.swift in Sources */,
 				8F171EE72BE0135900E7CE94 /* FloatersView.swift in Sources */,
+				73E5BC232BE024A200E12AD4 /* BicepMultiView.swift in Sources */,
 				8FC027212BDE5A3D00755C56 /* PosesView.swift in Sources */,
 				8FC027152BDE595B00755C56 /* OverlayView.swift in Sources */,
 				8FC0271F2BDE59FB00755C56 /* Pose.swift in Sources */,
@@ -394,11 +424,17 @@
 				736B79862BDFA12300355385 /* NavigationBarBackButtonTitleHiddenModifier.swift in Sources */,
 				8F62BA8C2BDEAEFB0095E304 /* SquatView.swift in Sources */,
 				8F62BA7A2BDE9ADD0095E304 /* MenuView.swift in Sources */,
+				73E5BC202BE0217400E12AD4 /* TransitionView.swift in Sources */,
 				8F62BA8E2BDEB06D0095E304 /* BicepCurlManager.swift in Sources */,
 				8F62BA7E2BDEA15C0095E304 /* MultiExerciseView.swift in Sources */,
+				73E5BC272BE0272800E12AD4 /* JumpingMultiView.swift in Sources */,
+				73E5BC252BE024DE00E12AD4 /* MultiCameraWithPosesAndOverlaysView.swift in Sources */,
 				8F136DFE2BDE6900008925F2 /* SplashView.swift in Sources */,
+				73E5BC2B2BE02F4E00E12AD4 /* ExerciseTransitionView.swift in Sources */,
 				8FC027022BDE58AC00755C56 /* ContentView.swift in Sources */,
+				73E5BC1E2BE0213E00E12AD4 /* LottieHelper.swift in Sources */,
 				8FC027002BDE58AC00755C56 /* GymFunApp.swift in Sources */,
+				73E5BC292BE0277800E12AD4 /* SquatMultiView.swift in Sources */,
 				8F62BA8A2BDEAEE90095E304 /* SquatManager.swift in Sources */,
 				8F136DFC2BDE6705008925F2 /* BicepCurlView.swift in Sources */,
 				8F62BA962BDEB9570095E304 /* MultiExerciseManager.swift in Sources */,

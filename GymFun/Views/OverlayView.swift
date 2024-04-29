@@ -13,7 +13,7 @@ struct OverlayView: View {
     @State var isPresented = false
 
     
-    var detected: Bool
+    var detected: Bool?
     var overlayCount: Bool
     let percent: CGFloat
     let flip: () -> Void
@@ -72,7 +72,7 @@ struct OverlayView: View {
 
                         }
                     }.padding()
-                    if detected {
+                    if detected ?? false {
                         FloatersView()
                     }
                     if overlayCount {

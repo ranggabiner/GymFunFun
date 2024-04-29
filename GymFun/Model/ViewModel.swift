@@ -10,11 +10,50 @@ import CreateMLComponents
 import AsyncAlgorithms
 import AudioToolbox
 
+enum ExerciseType {
+    case bicep
+    case jumping
+    case squat
+}
+
 /// - Tag: ViewModel
 class ViewModel: ObservableObject {
 
     /// The full-screen view that presents the pose on top of the video frames.
     @Published var liveCameraImageAndPoses: (image: CGImage, poses: [Pose])?
+    
+    @Published var showMenuScreen = false {
+        didSet {
+            if showMenuScreen {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    withAnimation {
+                        self.showOverlay = false
+                        switch self.currentExercise {
+                        case .bicep:
+                            self.currentExercise = .jumping
+                            self.uiCount = 0.0 // Reset the count
+                            // Reset other relevant properties
+                        case .jumping:
+                            self.currentExercise = .squat
+                            self.uiCount = 0.0 // Reset the count
+                            // Reset other relevant properties
+                        case .squat:
+                            self.currentExercise = .bicep
+                            self.uiCount = 0.0 // Reset the count
+                            // Reset other relevant properties
+                        }
+                        self.showMenuScreen = false
+                    }
+                }
+            }
+        }
+    }
+    
+    @Published var currentExercise: ExerciseType = .bicep
+    
+    static func preview() -> ViewModel {
+            ViewModel()
+        }
 
     /// The user-visible value of the repetition count.
     var uiCount: Float = 0.0
@@ -78,22 +117,29 @@ class ViewModel: ObservableObject {
     /// Start the video-processing pipeline by displaying the poses in the camera frames and
     /// starting the action repetition count prediction stream.
     func startVideoProcessingPipeline() {
+        if displayCameraTask == nil && predictionTask == nil {
+            if let displayCameraTask = displayCameraTask {
+                displayCameraTask.cancel()
+            }
 
-        if let displayCameraTask = displayCameraTask {
-            displayCameraTask.cancel()
-        }
+            displayCameraTask = Task {
+                // Display poses on top of each camera frame.
+                try await self.displayPoseInCamera()
+            }
 
-        displayCameraTask = Task {
-            // Display poses on top of each camera frame.
-            try await self.displayPoseInCamera()
-        }
-
-        if predictionTask == nil {
             predictionTask = Task {
                 // Predict the action repetition count.
                 try await self.predictCount()
             }
         }
+    }
+    
+    /// Stops the video processing pipeline by canceling the tasks.
+    func stopVideoProcessingPipeline() {
+        // Cancel the task responsible for displaying poses on camera frames.
+        displayCameraTask?.cancel()
+        // Cancel the task responsible for predicting action repetition counts.
+        predictionTask?.cancel()
     }
 
     /// Display poses on top of each camera frame.
@@ -171,6 +217,7 @@ class ViewModel: ObservableObject {
             if uiCount >= 5 {
                 playSound(name: "mclaren", extensionFile: "mp3")
                 showOverlay = true
+                showMenuScreen = true
                 uiCount = 0.0
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                             withAnimation {

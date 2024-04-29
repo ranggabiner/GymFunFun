@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct MultiExerciseManager: View {
+    @StateObject private var viewModel = ViewModel()
+
     var body: some View {
-        Text("MultiExercise Manager")
+        ExerciseTransitionView(viewModel: viewModel)
     }
 }
 
