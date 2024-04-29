@@ -110,7 +110,7 @@ extension View {
 
 struct OverlayView_Previews: PreviewProvider {
     static var previews: some View {
-        OverlayView(detected: true, overlayCount: false, percent: 6 / 10) { }
+        OverlayView(detected: true, overlayCount: false, percent: 10 / 10) { }
             .background(Color.red.opacity(0.4))
 
     }

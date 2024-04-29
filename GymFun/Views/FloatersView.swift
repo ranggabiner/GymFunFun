@@ -12,15 +12,17 @@ struct FloatersView: View {
     @State var loves: [String] = ["test"]
     
     var body: some View {
-        ZStack {
-            ForEach(0 ..< loves.count, id: \.self) { _ in
-                FloatersItem(loc: CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 1.3))
+            ZStack {
+                ForEach(0 ..< loves.count, id: \.self) { _ in
+                    FloatersItem(loc: CGPoint(x: CGFloat.random(in: 0...(UIScreen.main.bounds.width)),
+                                              y: CGFloat.random(in: 0...(UIScreen.main.bounds.height))))
+                }
+            }
+            .onAppear {
+                self.addLove()
             }
         }
-        .onAppear {
-            self.addLove()
-        }
-    }
+
     
     func addLove() {
         // Tambahkan elemen ke dalam array loves
