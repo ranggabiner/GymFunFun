@@ -214,7 +214,7 @@ class ViewModel: ObservableObject {
             }
             
             // Achieve the target count
-            if uiCount >= 10 {
+            if uiCount >= 5 {
                 playSound(name: "mclaren", extensionFile: "mp3")
                 showOverlay = true
                 showMenuScreen = true
