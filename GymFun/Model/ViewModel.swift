@@ -18,6 +18,8 @@ class ViewModel: ObservableObject {
 
     /// The user-visible value of the repetition count.
     var uiCount: Float = 0.0
+    
+    var showOverlay:Bool = false
 
     private var displayCameraTask: Task<Void, Error>?
 
@@ -160,8 +162,10 @@ class ViewModel: ObservableObject {
             // Achieve the target count
             if uiCount >= 10 {
                 playSound(name: "mclaren", extensionFile: "mp3")
+                showOverlay = true
                 uiCount = 0.0
             }
+            
 
             // Add the incremental count to the UI counter.
             uiCount += currentCumulativeCount - lastCumulativeCount

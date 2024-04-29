@@ -28,6 +28,8 @@
 		8F62BA902BDEB30F0095E304 /* JumpingJackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62BA8F2BDEB30F0095E304 /* JumpingJackManager.swift */; };
 		8F62BA922BDEB8590095E304 /* multiExercise.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8F62BA912BDEB8590095E304 /* multiExercise.gif */; };
 		8F62BA962BDEB9570095E304 /* MultiExerciseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F62BA952BDEB9570095E304 /* MultiExerciseManager.swift */; };
+		8F735D212BDFC8DC001AA032 /* StarAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8F735D202BDFC8DC001AA032 /* StarAnimation.json */; };
+		8F735D232BDFC901001AA032 /* OverlayFeedbackFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F735D222BDFC901001AA032 /* OverlayFeedbackFull.swift */; };
 		8FC027002BDE58AC00755C56 /* GymFunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC026FF2BDE58AC00755C56 /* GymFunApp.swift */; };
 		8FC027022BDE58AC00755C56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC027012BDE58AC00755C56 /* ContentView.swift */; };
 		8FC027042BDE58AD00755C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FC027032BDE58AD00755C56 /* Assets.xcassets */; };
@@ -78,6 +80,8 @@
 		8F62BA8F2BDEB30F0095E304 /* JumpingJackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpingJackManager.swift; sourceTree = "<group>"; };
 		8F62BA912BDEB8590095E304 /* multiExercise.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = multiExercise.gif; sourceTree = "<group>"; };
 		8F62BA952BDEB9570095E304 /* MultiExerciseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiExerciseManager.swift; sourceTree = "<group>"; };
+		8F735D202BDFC8DC001AA032 /* StarAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StarAnimation.json; sourceTree = "<group>"; };
+		8F735D222BDFC901001AA032 /* OverlayFeedbackFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayFeedbackFull.swift; sourceTree = "<group>"; };
 		8FC026FC2BDE58AC00755C56 /* GymFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FC026FF2BDE58AC00755C56 /* GymFunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymFunApp.swift; sourceTree = "<group>"; };
 		8FC027012BDE58AC00755C56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		8F136E022BDE6C1B008925F2 /* LottieFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8F735D202BDFC8DC001AA032 /* StarAnimation.json */,
 				8F136E052BDE6C8D008925F2 /* potatoPullUp.json */,
 			);
 			path = LottieFiles;
@@ -232,6 +237,7 @@
 				8FE4F5D12BDF2D340037D23C /* StartView.swift */,
 				8FE4F5DF2BDF3BAB0037D23C /* JumpingJackView.swift */,
 				8FE4F5E72BDF4DE80037D23C /* CongratulationView.swift */,
+				8F735D222BDFC901001AA032 /* OverlayFeedbackFull.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +349,7 @@
 				8FC027072BDE58AD00755C56 /* Preview Assets.xcassets in Resources */,
 				8FE4F5D62BDF34930037D23C /* squat_clean.gif in Resources */,
 				8FE4F5D82BDF34930037D23C /* jumpingJack_clean.gif in Resources */,
+				8F735D212BDFC8DC001AA032 /* StarAnimation.json in Resources */,
 				8FE4F5D02BDF2D220037D23C /* 321go.mp3 in Resources */,
 				8F62BA842BDEA7350095E304 /* squat.gif in Resources */,
 				8FE4F5D72BDF34930037D23C /* bicepCurl_clean.gif in Resources */,
@@ -390,6 +397,7 @@
 				8F62BA962BDEB9570095E304 /* MultiExerciseManager.swift in Sources */,
 				8F62BA882BDEA77B0095E304 /* GifManager.swift in Sources */,
 				8F62BA7C2BDEA13E0095E304 /* SingleExerciseView.swift in Sources */,
+				8F735D232BDFC901001AA032 /* OverlayFeedbackFull.swift in Sources */,
 				8FC0271D2BDE59DF00755C56 /* Connection.swift in Sources */,
 				8FE4F5E02BDF3BAB0037D23C /* JumpingJackView.swift in Sources */,
 				8F62BA782BDE97E80095E304 /* SoundManager.swift in Sources */,
@@ -526,7 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GymFun/Preview Content\"";
-				DEVELOPMENT_TEAM = 78R4Y86VWA;
+				DEVELOPMENT_TEAM = A23N5QDWR3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymFun/Info.plist;
@@ -556,7 +564,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GymFun/Preview Content\"";
-				DEVELOPMENT_TEAM = 78R4Y86VWA;
+				DEVELOPMENT_TEAM = A23N5QDWR3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymFun/Info.plist;
