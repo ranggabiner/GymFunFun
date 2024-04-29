@@ -27,7 +27,7 @@ struct JumpingJackManager: View {
             } else {
                 JumpingJackView()
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 22) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                             withAnimation {
                                 self.showingStartView = true
                             }
