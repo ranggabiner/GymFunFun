@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		736B79862BDFA12300355385 /* NavigationBarBackButtonTitleHiddenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736B79852BDFA12300355385 /* NavigationBarBackButtonTitleHiddenModifier.swift */; };
 		8F136DFC2BDE6705008925F2 /* BicepCurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F136DFB2BDE6705008925F2 /* BicepCurlView.swift */; };
 		8F136DFE2BDE6900008925F2 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F136DFD2BDE6900008925F2 /* SplashView.swift */; };
 		8F136E012BDE6ADE008925F2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8F136E002BDE6ADE008925F2 /* Lottie */; };
@@ -57,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		736B79852BDFA12300355385 /* NavigationBarBackButtonTitleHiddenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarBackButtonTitleHiddenModifier.swift; sourceTree = "<group>"; };
 		8F136DFB2BDE6705008925F2 /* BicepCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepCurlView.swift; sourceTree = "<group>"; };
 		8F136DFD2BDE6900008925F2 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		8F136E052BDE6C8D008925F2 /* potatoPullUp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = potatoPullUp.json; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		736B79872BDFA13000355385 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				736B79852BDFA12300355385 /* NavigationBarBackButtonTitleHiddenModifier.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		8F136E022BDE6C1B008925F2 /* LottieFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +185,7 @@
 		8FC026FE2BDE58AC00755C56 /* GymFun */ = {
 			isa = PBXGroup;
 			children = (
+				736B79872BDFA13000355385 /* Utility */,
 				8FE4F5E42BDF4DC30037D23C /* Videos */,
 				8F62BA802BDEA7270095E304 /* Gifs */,
 				8F62BA742BDE95D20095E304 /* Sounds */,
@@ -366,6 +377,7 @@
 				8FC0271F2BDE59FB00755C56 /* Pose.swift in Sources */,
 				8FC027282BDE5AAC00755C56 /* CameraWithPosesAndOverlaysView.swift in Sources */,
 				8F62BA902BDEB30F0095E304 /* JumpingJackManager.swift in Sources */,
+				736B79862BDFA12300355385 /* NavigationBarBackButtonTitleHiddenModifier.swift in Sources */,
 				8F62BA8C2BDEAEFB0095E304 /* SquatView.swift in Sources */,
 				8F62BA7A2BDE9ADD0095E304 /* MenuView.swift in Sources */,
 				8F62BA8E2BDEB06D0095E304 /* BicepCurlManager.swift in Sources */,

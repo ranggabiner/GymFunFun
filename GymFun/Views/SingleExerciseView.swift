@@ -42,6 +42,7 @@ struct SingleExerciseView: View {
             }
         }
         .background(Color.orange)   
+        .navigationBarBackButtonTitleHidden()
     }
 }
 

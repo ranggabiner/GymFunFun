@@ -22,7 +22,7 @@ struct MultiExerciseView: View {
             }
         }
         .background(Color(.orange))
-        
+        .navigationBarBackButtonTitleHidden()
     }
 }
 
