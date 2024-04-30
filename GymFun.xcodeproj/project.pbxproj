@@ -15,6 +15,7 @@
 		73E5BC272BE0272800E12AD4 /* JumpingMultiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5BC262BE0272800E12AD4 /* JumpingMultiView.swift */; };
 		73E5BC292BE0277800E12AD4 /* SquatMultiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5BC282BE0277800E12AD4 /* SquatMultiView.swift */; };
 		73E5BC2B2BE02F4E00E12AD4 /* ExerciseTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5BC2A2BE02F4E00E12AD4 /* ExerciseTransitionView.swift */; };
+		73E5BC2D2BE0945A00E12AD4 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5BC2C2BE0945A00E12AD4 /* FinishView.swift */; };
 		8F136DFC2BDE6705008925F2 /* BicepCurlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F136DFB2BDE6705008925F2 /* BicepCurlView.swift */; };
 		8F136DFE2BDE6900008925F2 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F136DFD2BDE6900008925F2 /* SplashView.swift */; };
 		8F136E012BDE6ADE008925F2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8F136E002BDE6ADE008925F2 /* Lottie */; };
@@ -77,6 +78,7 @@
 		73E5BC262BE0272800E12AD4 /* JumpingMultiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumpingMultiView.swift; sourceTree = "<group>"; };
 		73E5BC282BE0277800E12AD4 /* SquatMultiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquatMultiView.swift; sourceTree = "<group>"; };
 		73E5BC2A2BE02F4E00E12AD4 /* ExerciseTransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTransitionView.swift; sourceTree = "<group>"; };
+		73E5BC2C2BE0945A00E12AD4 /* FinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishView.swift; sourceTree = "<group>"; };
 		8F136DFB2BDE6705008925F2 /* BicepCurlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepCurlView.swift; sourceTree = "<group>"; };
 		8F136DFD2BDE6900008925F2 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		8F136E052BDE6C8D008925F2 /* potatoPullUp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = potatoPullUp.json; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				73E5BC262BE0272800E12AD4 /* JumpingMultiView.swift */,
 				73E5BC282BE0277800E12AD4 /* SquatMultiView.swift */,
 				73E5BC2A2BE02F4E00E12AD4 /* ExerciseTransitionView.swift */,
+				73E5BC2C2BE0945A00E12AD4 /* FinishView.swift */,
 			);
 			path = Multi;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				73E5BC292BE0277800E12AD4 /* SquatMultiView.swift in Sources */,
 				8F62BA8A2BDEAEE90095E304 /* SquatManager.swift in Sources */,
 				8F136DFC2BDE6705008925F2 /* BicepCurlView.swift in Sources */,
+				73E5BC2D2BE0945A00E12AD4 /* FinishView.swift in Sources */,
 				8F62BA962BDEB9570095E304 /* MultiExerciseManager.swift in Sources */,
 				8F62BA882BDEA77B0095E304 /* GifManager.swift in Sources */,
 				8F62BA7C2BDEA13E0095E304 /* SingleExerciseView.swift in Sources */,
@@ -578,7 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GymFun/Preview Content\"";
-				DEVELOPMENT_TEAM = A23N5QDWR3;
+				DEVELOPMENT_TEAM = 78R4Y86VWA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymFun/Info.plist;
@@ -608,7 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GymFun/Preview Content\"";
-				DEVELOPMENT_TEAM = A23N5QDWR3;
+				DEVELOPMENT_TEAM = 78R4Y86VWA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GymFun/Info.plist;

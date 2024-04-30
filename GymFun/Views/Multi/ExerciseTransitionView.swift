@@ -22,6 +22,8 @@ struct ExerciseTransitionView: View {
                     JumpingMultiView(viewModel: viewModel)
                 case .squat:
                     SquatMultiView(viewModel: viewModel)
+                case .finish:
+                    FinishView(viewModel: viewModel)
                 }
             }
         }

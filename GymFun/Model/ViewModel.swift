@@ -14,6 +14,7 @@ enum ExerciseType {
     case bicep
     case jumping
     case squat
+    case finish
 }
 
 /// - Tag: ViewModel
@@ -31,16 +32,15 @@ class ViewModel: ObservableObject {
                         switch self.currentExercise {
                         case .bicep:
                             self.currentExercise = .jumping
-                            self.uiCount = 0.0 // Reset the count
-                            // Reset other relevant properties
+                            self.uiCount = 0.0
                         case .jumping:
                             self.currentExercise = .squat
-                            self.uiCount = 0.0 // Reset the count
-                            // Reset other relevant properties
+                            self.uiCount = 0.0
                         case .squat:
+                            self.currentExercise = .finish
+                            self.uiCount = 0.0
+                        case .finish:
                             self.currentExercise = .bicep
-                            self.uiCount = 0.0 // Reset the count
-                            // Reset other relevant properties
                         }
                         self.showMenuScreen = false
                     }
@@ -81,6 +81,14 @@ class ViewModel: ObservableObject {
     
     /// The counter to count action repetitions from a pose stream.
     private let actionCounter = ActionCounter()
+    
+    func resetExercises() {
+        currentExercise = .bicep
+        uiCount = 0.0
+        showMenuScreen = false
+        showOverlay = false
+        // Reset any other relevant properties
+    }
 
 // MARK: - View Controller Events
 
