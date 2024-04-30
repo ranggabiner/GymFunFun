@@ -60,6 +60,9 @@ class ViewModel: ObservableObject {
     
     var showOverlay:Bool = false
     
+    var showOverlaySingle:Bool = false
+    
+    
     var isDetected: Bool = false
     
     private var displayCameraTask: Task<Void, Error>?
@@ -223,13 +226,14 @@ class ViewModel: ObservableObject {
             
             // Achieve the target count
             if uiCount >= 5 {
-                playSound(name: "mclaren", extensionFile: "mp3")
+                
                 showOverlay = true
+                showOverlaySingle = true
                 showMenuScreen = true
                 uiCount = 0.0
                         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                             withAnimation {
-                                self.showOverlay = false
+                                self.showOverlaySingle = false
                             }
                         }
             }

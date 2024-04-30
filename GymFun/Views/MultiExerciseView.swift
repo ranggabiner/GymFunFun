@@ -13,7 +13,7 @@ struct MultiExerciseView: View {
             Rectangle()
                 .fill(Color(.orange))
             // .navigationBarBackButtonHidden(true) (for can't back to old page)
-            NavigationLink(destination: MultiExerciseManager()
+            NavigationLink(destination: MultiBicepManager()
                 .navigationBarBackButtonHidden(true)
             ) {
                 GifImageView("multiExercise")

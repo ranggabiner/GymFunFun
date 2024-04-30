@@ -16,19 +16,22 @@ struct OverlayFeedbackFull: View {
     var onAnimationDidFinish: (() -> Void)? = nil
     
     var body: some View {
-        LottieView(animation: .named(fileName))
-            .configure({ lottieAnimationView in
-                lottieAnimationView.contentMode = contentMode
-            })
-            .playbackMode(.playing(.toProgress(1, loopMode: playLoopMode)))
-            .animationDidFinish { completed in
-                onAnimationDidFinish?()
-            }
-            .onAppear {
-                playSound(name: "mclaren", extensionFile: "mp3")
+        ZStack {
+            Rectangle()
+                .fill(Color(.orange))
+            LottieView(animation: .named(fileName))
+                .configure({ lottieAnimationView in
+                    lottieAnimationView.contentMode = contentMode
+                })
+                .playbackMode(.playing(.toProgress(1, loopMode: playLoopMode)))
+                .animationDidFinish { completed in
+                    onAnimationDidFinish?()
+                }
         }
+        .background(Color(.orange))
     }
 }
+
 
 #Preview {
     OverlayFeedbackFull()

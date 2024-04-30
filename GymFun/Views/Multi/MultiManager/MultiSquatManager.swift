@@ -1,22 +1,23 @@
 //
-//  JumpingMultiView.swift
+//  BicepCurlManager.swift
 //  GymFun
 //
-//  Created by ahmad naufal alfakhar on 30/04/24.
+//  Created by Rangga Biner on 28/04/24.
 //
 
 import SwiftUI
 
-struct JumpingMultiView: View {
+struct MultiSquatManager: View {
     @State private var showingMainView = false
     @State private var showingStartView = false
-    
-    @ObservedObject var viewModel: ViewModel
+    @State private var showingStarFeedbackView = false
+
     
     var body: some View {
         VStack {
             if showingMainView {
-                MultiCameraWithPosesAndOverlaysView(viewModel: viewModel) }
+                MultiSquatCameraOverlaysAndViews()
+            }
             else if showingStartView {
                 StartView()
                     .onAppear {
@@ -27,7 +28,7 @@ struct JumpingMultiView: View {
                         }
                 }
             } else {
-                JumpingJackView()
+                SquatView()
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                             withAnimation {
@@ -35,10 +36,11 @@ struct JumpingMultiView: View {
                             }
                         }
                 }
-            }
+            } 
         }
-    }}
+    }
+}
 
 #Preview {
-    JumpingMultiView(viewModel: ViewModel.preview())
+    MultiSquatManager()
 }

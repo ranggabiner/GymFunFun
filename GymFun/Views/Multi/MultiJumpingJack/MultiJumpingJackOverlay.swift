@@ -8,10 +8,7 @@
 import SwiftUI
 
 /// - Tag: OverlayView
-struct OverlayView: View {
-
-    @State var isPresented = false
-
+struct MultiJumpingJackOverlay: View {
     
     var detected: Bool?
     var overlayCount: Bool
@@ -51,40 +48,13 @@ struct OverlayView: View {
                             }
 
                             Spacer()
-                        
-                            
-                            Button { 
-                                isPresented = true
-                            } label: {
-                                Label("Back", systemImage: "return")
-                                    .bold()
-                                    .foregroundColor(.orange)
-                                    .labelStyle(.iconOnly)
-                                    .padding()
-                                    .background(
-                                                RoundedRectangle(cornerRadius: 10)
-                                                    .fill(Color(.white))
-                                            )
-                            }
-                            .fullScreenCover(isPresented: $isPresented, content: {
-                                MenuView()
-                            })
-
                         }
                     }.padding()
                     if detected ?? false {
                         FloatersView()
                     }
                     if overlayCount {
-                        OverlayFeedbackFull()
-                            .onAppear {
-                                playSound(name: "mclaren", extensionFile: "mp3")
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                                    withAnimation {
-                                  
-                                    }
-                                }
-                        }
+                        EndingManager()
                     }
                 }
         }
@@ -98,20 +68,9 @@ struct OverlayView: View {
 
 
 
-extension View {
-    func bubbleBackground() -> some View {
-        self.padding()
-            .background {
-                RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(.primary)
-                    .opacity(0.4)
-            }
-    }
-}
-
-struct OverlayView_Previews: PreviewProvider {
+struct MultiJumpingJackOverlayView_Previews: PreviewProvider {
     static var previews: some View {
-        OverlayView(detected: true, overlayCount: false, percent: 10 / 10) { }
+        MultiJumpingJackOverlay(detected: true, overlayCount: false, percent: 10 / 10) { }
             .background(Color.red.opacity(0.4))
 
     }

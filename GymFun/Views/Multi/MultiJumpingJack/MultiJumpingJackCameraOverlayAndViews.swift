@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct CameraWithPosesAndOverlaysView: View {
+struct MultiJumpingJackCameraOverlayAndViews: View {
 
     @StateObject var viewModel = ViewModel()
 
     var body: some View {
-        OverlayView(detected: viewModel.isDetected, overlayCount: viewModel.showOverlaySingle, percent: CGFloat(viewModel.uiCount) / 5) {
+        MultiJumpingJackOverlay(detected: viewModel.isDetected, overlayCount: viewModel.showOverlay, percent: CGFloat(viewModel.uiCount) / 5) {
             viewModel.onCameraButtonTapped()
         }
         .background {
@@ -32,8 +32,8 @@ struct CameraWithPosesAndOverlaysView: View {
     }
 }
 
-struct CameraWithOverlaysView_Previews: PreviewProvider {
+struct MultiJumpingJackCameraOverlayAndViews_Previews: PreviewProvider {
     static var previews: some View {
-        CameraWithPosesAndOverlaysView()
+        MultiJumpingJackCameraOverlayAndViews()
     }
 }
